@@ -14,8 +14,7 @@
     "trendyways": "^0.4.2"
   },
   "scripts": {
-    "start": "node BFXfibbmonster.js",
-    "test": "babel-node trads.js --presets es2015,stage-2"
+    "start": "node app.js"
   },
   "deprecated": false,
   "description": "Engine for Polo automation",
