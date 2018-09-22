@@ -8,10 +8,12 @@
     "bitmex-realtime-api": "^0.4.0",
     "body-parser": "^1.18.3",
     "ccxt": "^1.17.94",
+    "crypto": "^1.0.1",
     "express": "^4.16.3",
     "path": "*",
     "request": "^2.87.0",
     "system-sleep": "^1.3.6",
+    "technicalindicators": "^1.1.13",
     "trendyways": "^0.4.2"
   },
   "scripts": {
