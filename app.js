@@ -1,4 +1,16 @@
 const express = require ("express")
+const BitMEXClient = require('bitmex-realtime-api');
+// See 'options' reference below
+const client = new BitMEXClient(
+{
+  testnet: true, // set `true` to connect to the testnet site (testnet.bitmex.com)
+  // Set API Key ID and Secret to subscribe to private streams.
+  // See `Available Private Streams` below.
+  apiKeyID: 'B-Cg886lsAQdymvKQcd0HNne',
+  apiKeySecret: 'BtGVg4v3vsRkcsG56wRfoG-JR72ZSyPFF4rzo-39Sogx8f7g',
+  maxTableLen: 10000  // the maximum number of table elements to keep in memory (FIFO queue)
+}
+);
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -9,6 +21,13 @@ app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 	extended: true
 }));
+
+client.addStream('XBTUSD', 'tradeBin1m', function (data, symbol, tableName) {
+  log+=data[data.length-1].close + "\r\n";
+  console.log(data[data.length-1].close);
+});
+
+
 
 app.get('/', (req, res) => {
 var msg = "";
