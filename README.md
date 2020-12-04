@@ -1,3 +1,4 @@
+If you found this repo useful, consider clicking the sponsor button near the top :) Sponsoring via GitHub is as little as $1/month and if you do not use banks or credit cards, there are crypto links included :)<br /><br />
 https://www.liveedu.tv/h3xadecimal/2bEeY-how-to-create-a-bot-for-bitcoin-trading/
 
 We will use Python and Node to create a Bitcoin trading bot for trending price momentum indicators - fulfilling the requirements of a real, live contract from a popular freelancing marketplace, then test our software using paper trading (testnet on BitMex) and also forward testing performance and profitability using live funds.
